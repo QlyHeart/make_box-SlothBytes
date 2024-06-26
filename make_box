@@ -1,0 +1,34 @@
+
+def make_box(x, y):
+    """
+    Creates a box with the specified width and height.
+
+    Args:
+        x (int): The width of the box.
+        y (int): The height of the box.
+
+    Returns:
+        str: The string representation of the box.
+
+    Raises:
+        None
+    """
+    if y < 2 or x < 2:
+        return "Invalid input"
+    return "#"*x + "\n" + ("#" + " "*(x-2) + "#\n")*(y-2) + "#"*x + "\n"
+
+def make_square(x):
+    """
+    Creates a square box with the specified side length.
+
+    Args:
+        x (int): The side length of the square.
+
+    Returns:
+        str: The string representation of the square box.
+
+    Raises:
+        None
+    """
+    return make_box(x, x)
+
